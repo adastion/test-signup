@@ -1,9 +1,0 @@
-@mixin primary-copy-font {
-  font-family: "FiraSans", sans-serif;
-}
-
-@mixin desktop-and-less {
-  @media (max-width: 1200px) {
-    @content;
-  }
-}
