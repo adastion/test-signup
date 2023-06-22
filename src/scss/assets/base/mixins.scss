@@ -1,5 +1,9 @@
 @mixin primary-copy-font {
-  font-family: "FiraSans", sans-serif;
+  font-family: "Work Sans" sans-serif;
+}
+
+@mixin secondary-copy-font {
+  font-family: "PT Sans", sans-serif;
 }
 
 @mixin desktop-and-less {
