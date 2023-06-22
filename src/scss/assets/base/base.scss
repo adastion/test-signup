@@ -1,6 +1,7 @@
 html {
 	@include primary-copy-font;
 	color: $base-text-color;
+	font-size: 14px;
 	font-weight: 300;
 	line-height: normal;
 }
@@ -15,7 +16,11 @@ a {
 	color: $royal_blue;
 }
 
+a,
+button {
+	transition: all 0.4s;
+}
+
 @function vw($val, $base: 1920) {
 	@return calc($val / $base) * 100vw;
 }
-

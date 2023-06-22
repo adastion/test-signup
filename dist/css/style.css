@@ -100,6 +100,7 @@ select {
 html {
   font-family: "Work Sans", sans-serif;
   color: #111111;
+  font-size: 14px;
   font-weight: 300;
   line-height: normal;
 }
@@ -112,6 +113,12 @@ h3 {
 
 a {
   color: #5A61ED;
+}
+
+a,
+button {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .wrapper {
@@ -133,6 +140,20 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.btn {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  background: #5A61ED;
+  color: #ffffff;
+  padding: 7px 25px;
+  cursor: pointer;
+}
+.btn:hover, .btn:focus-within {
+  opacity: 0.7;
 }
 
 .header {
@@ -167,9 +188,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   width: 100%;
   padding: 39px 21px 32px;
   background: #ffffff;
@@ -198,9 +219,20 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 13px;
+}
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 4px;
 }
 .footer__btn {
   font-weight: 500;
+}
+.footer__btn:hover {
+  opacity: 0.7;
 }

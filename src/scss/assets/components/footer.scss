@@ -1,13 +1,19 @@
 .footer {
-display: flex;
-align-items: center;
-font-size: 13px;
-gap: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 13px;
+  
+	&__inner {
+    display: flex;
+    gap: 4px;
+	}
 
-  &__text {
-  }
+	&__btn {
+		font-weight: 500;
 
-  &__btn {
-    font-weight: 500;
-  }
+		&:hover {
+			opacity: 0.7;
+		}
+	}
 }
