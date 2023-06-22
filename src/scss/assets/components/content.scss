@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 39px 21px 32px;
+  background: $white;
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 11px;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__text {
+  }
+}

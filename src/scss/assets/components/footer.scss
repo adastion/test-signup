@@ -1,0 +1,13 @@
+.footer {
+display: flex;
+align-items: center;
+font-size: 13px;
+gap: 4px;
+
+  &__text {
+  }
+
+  &__btn {
+    font-weight: 500;
+  }
+}

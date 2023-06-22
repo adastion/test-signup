@@ -1,8 +1,9 @@
 .container {
-  padding-right: 84px;
-
-  &--header {
-    position: absolute;
-    height: 100%;
-  }
+  max-width: 800px;
+  width: 100%;
+  min-height: 600px;
+  height: 100%;
+  padding: 60px 68px;
+  background: $link_water;
+  display: flex;
 }

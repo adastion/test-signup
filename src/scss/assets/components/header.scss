@@ -1,26 +1,16 @@
 .header {
-  position: relative;
+	background: $royal_blue;
+	display: flex;
+	justify-content: end;
+	width: 137.2px;
+	padding: 22px 6px;
 
-  &__map {
-    position: absolute;
-    top: -772px;
-    right: -76px;
-    z-index: 25;
-
-    & path[fill-rule] {
-      fill: $cornflower_blue;
-    }
-  }
-
-  &__line {
-    stroke-dashoffset: 642px;
-    stroke-dasharray: 642px;
-    animation: map-line 3s infinite 6s;
-
-    @keyframes map-line {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-  }
+	&__title {
+		@include secondary-copy-font;
+		color: $secondary-text-color;
+		font-size: 49px;
+		font-weight: 300;
+		writing-mode: vertical-lr;
+		transform: rotate(180deg);
+	}
 }
