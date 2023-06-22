@@ -1,0 +1,30 @@
+.btn {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-arrow {
+  width: 25px;
+  height: 21px;
+
+  & svg {
+    fill: $white;
+  }
+  
+  &:hover,
+  &:focus-within {
+    & svg {
+      opacity: 0.5;
+    }
+  }
+
+  &--flip {
+    transform: rotate(180deg);
+  }
+}

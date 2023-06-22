@@ -1,0 +1,48 @@
+.title-block {
+  margin-top: 156px;
+
+  &__text {
+    font-size: 80px;
+    font-weight: 800;
+    padding-left: 240px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 1px;
+      background: $cornflower_blue;
+    }
+
+    &::after {
+      content: attr(data-title);
+      position: absolute;
+      top: 38px;
+      left: -56px;
+      font-size: 200px;
+      line-height: 156px;
+      color: $white;
+      opacity: 0.02;
+    }
+  }
+
+  &--header {
+    position: absolute;
+    margin: 0;
+    z-index: 10;
+
+    .title-block__text {
+      &::before {
+        content: none;
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

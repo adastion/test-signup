@@ -1,0 +1,139 @@
+.menu {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  max-width: 168px;
+  border-right: 1px solid $white;
+  text-transform: lowercase;
+  padding-bottom: 45px;
+  position: relative;
+  height: inherit;
+  z-index: 20;
+
+  @include desktop-and-less {
+    position: relative;
+    left: -100%;
+  }
+
+  &__btn-burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: red;
+    display: none;
+
+    @include desktop-and-less {
+      display: block;
+    }
+  }
+
+  & *::first-letter {
+    text-transform: uppercase;
+  }
+
+  &__list {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__item {
+    & a {
+      display: grid;
+      justify-items: center;
+      color: $white;
+    }
+
+    &:hover,
+    &:focus-within {
+      & a {
+        color: $cornflower_blue;
+      }
+
+      & .menu__icon {
+        transition: all 0.3s;
+        fill: $cornflower_blue;
+      }
+    }
+  }
+
+  &__icon {
+    width: 59px;
+    height: 46px;
+    fill: $white;
+  }
+
+  &__name {
+  }
+
+  &__search {
+    position: relative;
+    cursor: pointer;
+
+    & input {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -2200%;
+      z-index: 10;
+      width: 400px;
+      height: 40px;
+      border-radius: 20px;
+      padding: 10px 15px 10px 50px;
+      background: rgba($white, 90%);
+      font-size: 16px;
+      transition: left 0.3s ease-out;
+    }
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover,
+    &:focus-within {
+      & input {
+        left: -15px;
+      }
+
+      & svg {
+        fill: $cornflower_blue;
+        position: relative;
+        z-index: 20;
+      }
+    }
+  }
+
+  &__wrap-date {
+    display: grid;
+    justify-items: center;
+    font-weight: 300;
+  }
+
+  &__time {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 64px;
+  }
+
+  &__date {
+    font-size: 16px;
+  }
+
+  &__location {
+    display: flex;
+    gap: 0 5px;
+    align-items: center;
+    margin-top: 30px;
+
+    & svg {
+      width: 11px;
+      height: 13px;
+    }
+  }
+}
