@@ -9,7 +9,7 @@ dropDownBtn.addEventListener("click", function (e) {
 
 dropDownListItem.forEach(function (item) {
 	item.addEventListener("click", function () {
-		dropDownBtn.innerText = this.innerText;
+		dropDownBtn.value = this.innerText;
 	});
 });
 

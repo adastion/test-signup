@@ -39,6 +39,12 @@
 		justify-content: center;
 		gap: 11px;
 		height: 100%;
+		margin-left: 43px;
+
+		@include tablet-and-less {
+			margin: 0;
+			align-items: center;
+		}
 	}
 
 	&__block-title {
