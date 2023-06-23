@@ -6,8 +6,14 @@
   font-family: "PT Sans", sans-serif;
 }
 
-@mixin desktop-and-less {
-  @media (max-width: 1200px) {
+@mixin tablet-and-less {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone-and-less {
+  @media (max-width: 492px) {
     @content;
   }
 }

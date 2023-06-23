@@ -2,9 +2,12 @@
 	background: $royal_blue;
 	display: flex;
 	justify-content: end;
-	width: 137.2px;
 	width: 173.2px;
 	padding: 22px 6px;
+
+	@include phone-and-less {
+		width: auto;
+	}
 
 	&__title {
 		@include secondary-copy-font;

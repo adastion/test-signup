@@ -7,6 +7,10 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 13.5px;
 		padding: 20px 0;
+
+		@include tablet-and-less {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {
