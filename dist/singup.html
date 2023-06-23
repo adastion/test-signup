@@ -20,7 +20,7 @@
           <h2 class="content__title">New user? </h2>
           <p>Use the form below to create your account.</p>
         </div>
-        <form class="form" action="/">
+        <form class="form" action="#">
           <ul class="form__list">
             <li class="form__item">
               <label class="form__name-input" for="firstName">First Name</label>
@@ -30,15 +30,27 @@
               <label class="form__name-input" for="lastName">Last Name</label>
               <input class="form__input" id="lastName" type="text">
             </li>
-            <li class="form__item">
+            <li class="select-box form__item">
               <label class="form__name-input" for="nationality">Nationality</label>
-              <input class="form__input" id="nationality" type="text">
+
+              <button class="select-box__select form__input"></button>
+              <ul class="select-box__list">
+                <li class="select-box__item" data-value="american">American</li>
+                <li class="select-box__item" data-value="the british">The british</li>
+                <li class="select-box__item" data-value="russian">Russian</li>
+                <li class="select-box__item" data-value="french">French</li>
+                <li class="select-box__item" data-value="italian">Italian</li>
+                <li class="select-box__item" data-value="german">German</li>
+              </ul>
+
+
+              <input class="visually-hidden" id="nationality" type="text">
             </li>
             <li class="form__item">
               <label class="form__name-input" for="userEmail">E-mail</label>
               <input class="form__input" id="userEmail" type="email">
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--inner-date">
               <label class="form__name-input" for="dateOfBirth">Date of Birth</label>
               <input class="form__input" id="dateOfBirth" type="date">
             </li>

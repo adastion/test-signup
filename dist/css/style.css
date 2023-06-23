@@ -116,7 +116,8 @@ a {
 }
 
 a,
-button {
+button,
+input {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -267,11 +268,18 @@ button {
   background: none;
   border-bottom: 0.7px solid #7C7C7C;
   font-weight: 400;
-  padding: 4px 0 6.33px;
+  padding: 5px 12px 6.33px 0;
+  position: relative;
+}
+.form__input:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.5);
+          box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.5);
 }
 .form__label-gender {
   margin-left: 18px;
   position: relative;
+  cursor: pointer;
 }
 .form__label-gender::before {
   content: "";
@@ -315,6 +323,54 @@ button {
 }
 .form__inner-inputs-radio input:hover::before, .form__inner-inputs-radio input:focus-within::before {
   border: 2px solid red;
+}
+
+.select-box {
+  position: relative;
+}
+.select-box__select {
+  position: relative;
+  cursor: pointer;
+  text-align: start;
+  height: 28.09px;
+}
+.select-box__select::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 8px;
+  height: 4px;
+  background: url("../images/arrow-down.svg") no-repeat;
+  background-position: center;
+}
+.select-box__list {
+  position: absolute;
+  top: 50px;
+  z-index: 20;
+  background: #ffffff;
+  width: 100%;
+  max-height: 140px;
+  overflow: auto;
+  font-weight: 400;
+  display: none;
+}
+.select-box__list.show {
+  display: -ms-grid;
+  display: grid;
+}
+.select-box__item {
+  padding: 5px 12px 6.33px 0;
+  cursor: pointer;
+}
+.select-box__item:hover, .select-box__item:focus-within {
+  background: #F4F5FC;
+}
+.select-box__item:active {
+  opacity: 0.7;
 }
 
 .footer {

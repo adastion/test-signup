@@ -1,0 +1,52 @@
+.select-box {
+	position: relative;
+
+	&__select {
+		position: relative;
+		cursor: pointer;
+		text-align: start;
+    height: 28.09px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 8px;
+			height: 4px;
+			background: url("../images/arrow-down.svg") no-repeat;
+			background-position: center;
+		}
+	}
+
+	&__list {
+		position: absolute;
+		top: 50px;
+		z-index: 20;
+		background: $white;
+		width: 100%;
+		max-height: 140px;
+		overflow: auto;
+		font-weight: 400;
+		display: none;
+
+		&.show {
+			display: grid;
+		}
+	}
+
+	&__item {
+		padding: 5px 12px 6.33px 0;
+		cursor: pointer;
+
+		&:hover,
+		&:focus-within {
+			background: $link_water;
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
+	}
+}
