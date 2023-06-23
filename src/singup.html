@@ -15,7 +15,52 @@
       <header class="header">
         <h1 class="header__title">Sign up</h1>
       </header>
-      <main class="content">
+      <main class="content content--background-image">
+        <div class="content__block-title">
+          <h2 class="content__title">New user? </h2>
+          <p>Use the form below to create your account.</p>
+        </div>
+        <form class="form" action="/">
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__name-input" for="firstName">First Name</label>
+              <input class="form__input" id="firstName" type="text">
+            </li>
+            <li class="form__item">
+              <label class="form__name-input" for="lastName">Last Name</label>
+              <input class="form__input" id="lastName" type="text">
+            </li>
+            <li class="form__item">
+              <label class="form__name-input" for="nationality">Nationality</label>
+              <input class="form__input" id="nationality" type="text">
+            </li>
+            <li class="form__item">
+              <label class="form__name-input" for="userEmail">E-mail</label>
+              <input class="form__input" id="userEmail" type="email">
+            </li>
+            <li class="form__item">
+              <label class="form__name-input" for="dateOfBirth">Date of Birth</label>
+              <input class="form__input" id="dateOfBirth" type="date">
+            </li>
+            <li class="form__item">
+              <span class="form__name-input">Gender</span>
+              <div class="form__inner-inputs-radio">
+                <input id="male" class="visually-hidden" type="radio" name="gender">
+                <label class="form__label-gender" for="male">Male</label>
+                <input id="female" checked class="visually-hidden" type="radio" name="gender">
+                <label class="form__label-gender" for="female">Female</label>
+              </div>
+            </li>
+            <li class="form__item">
+              <label class="form__name-input" for="password">Password</label>
+              <input id="password" class="form__input" type="password">
+            </li>
+            <li class="form__item">
+              <label class="form__name-input" for="confirmPassword">Confirm Password</label>
+              <input id="confirmPassword" class="form__input" type="password">
+            </li>
+          </ul>
+        </form>
         <footer class="footer">
           <div class="footer__inner">
             <p>Have an account?</p>

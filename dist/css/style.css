@@ -121,6 +121,14 @@ button {
   transition: all 0.4s;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,6 +203,20 @@ button {
   padding: 39px 21px 32px;
   background: #ffffff;
 }
+.content--background-image {
+  position: relative;
+}
+.content--background-image::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 307px;
+  height: 355px;
+  background: url("../images/icon-bg.svg") no-repeat;
+  background-position: center;
+}
 .content__message {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,9 +231,85 @@ button {
   gap: 11px;
   height: 100%;
 }
+.content__block-title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  z-index: 10;
+}
 .content__title {
   font-size: 22px;
 }
+.form {
+  height: 100%;
+  z-index: 10;
+}
+.form__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13.5px;
+}
+.form__item {
+  display: -ms-grid;
+  display: grid;
+}
+.form__name-input {
+  font-size: 12px;
+}
+.form__input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 0.7px solid #7C7C7C;
+  font-weight: 400;
+  padding: 4px 0 6.33px;
+}
+.form__label-gender {
+  margin-left: 18px;
+  position: relative;
+}
+.form__label-gender::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 0.7px solid #5A61ED;
+}
+.form__label-gender::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5A61ED;
+  display: none;
+}
+.form__inner-inputs-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  gap: 19px;
+}
+.form__inner-inputs-radio input:checked + .form__label-gender::after {
+  display: block;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,6 +321,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 13px;
+  z-index: 10;
 }
 .footer__inner {
   display: -webkit-box;

@@ -1,0 +1,67 @@
+.form {
+	height: 100%;
+	z-index: 10;
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 13.5px;
+	}
+
+	&__item {
+		display: grid;
+	}
+
+	&__name-input {
+		font-size: 12px;
+	}
+
+	&__input {
+		border: none;
+		border-radius: 0;
+		border-bottom: 0.7px solid $boulder;
+		font-weight: 400;
+		padding: 4px 0 6.33px;
+	}
+
+	&__label-gender {
+		margin-left: 18px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -18px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			border: 0.7px solid $royal_blue;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: -15px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background: $royal_blue;
+			display: none;
+		}
+	}
+
+	&__inner-inputs-radio {
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		gap: 19px;
+
+		& input:checked + .form__label-gender::after {
+			display: block;
+		}
+	}
+}
