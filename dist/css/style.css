@@ -152,6 +152,7 @@ button {
 
 .btn {
   font-family: "PT Sans", sans-serif;
+  font-size: 14px;
   font-weight: 400;
   outline: none;
   border: none;
@@ -173,6 +174,7 @@ button {
       -ms-flex-pack: end;
           justify-content: end;
   width: 137.2px;
+  width: 173.2px;
   padding: 22px 6px;
 }
 .header__title {
@@ -250,6 +252,7 @@ button {
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   gap: 13.5px;
+  padding: 20px 0;
 }
 .form__item {
   display: -ms-grid;
@@ -261,6 +264,7 @@ button {
 .form__input {
   border: none;
   border-radius: 0;
+  background: none;
   border-bottom: 0.7px solid #7C7C7C;
   font-weight: 400;
   padding: 4px 0 6.33px;
@@ -308,6 +312,9 @@ button {
 }
 .form__inner-inputs-radio input:checked + .form__label-gender::after {
   display: block;
+}
+.form__inner-inputs-radio input:hover::before, .form__inner-inputs-radio input:focus-within::before {
+  border: 2px solid red;
 }
 
 .footer {

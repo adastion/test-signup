@@ -6,6 +6,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 13.5px;
+    padding: 20px 0;
 	}
 
 	&__item {
@@ -19,6 +20,7 @@
 	&__input {
 		border: none;
 		border-radius: 0;
+    background: none;
 		border-bottom: 0.7px solid $boulder;
 		font-weight: 400;
 		padding: 4px 0 6.33px;
@@ -38,10 +40,11 @@
 			height: 12px;
 			border-radius: 50%;
 			border: 0.7px solid $royal_blue;
-		}
 
+		}
+    
 		&::after {
-			content: "";
+      content: "";
 			position: absolute;
 			left: -15px;
 			top: 50%;
@@ -52,16 +55,25 @@
 			background: $royal_blue;
 			display: none;
 		}
-	}
 
+	}
+  
 	&__inner-inputs-radio {
-		display: flex;
+    display: flex;
 		align-items: center;
 		font-weight: 400;
 		gap: 19px;
-
+    
 		& input:checked + .form__label-gender::after {
-			display: block;
+      display: block;
 		}
+
+    & input {
+
+      &:hover::before,
+      &:focus-within::before {
+        border: 2px solid red;
+      }
+    }
 	}
 }
