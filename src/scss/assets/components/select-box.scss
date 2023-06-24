@@ -15,12 +15,13 @@
 			height: 4px;
 			background: url("../images/arrow-down.svg") no-repeat;
 			background-position: center;
+			transition: all 0.3s ease;
 		}
 
-		
 		&.arow-rotate {
-			transition: all 0.3s ease;
+
 			&::after {
+				transition: all 0.3s ease;
 				transform: translateY(-50%) rotate(180deg);
 			}
 		}

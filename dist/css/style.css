@@ -454,12 +454,12 @@ input {
   height: 4px;
   background: url("../images/arrow-down.svg") no-repeat;
   background-position: center;
-}
-.select-box__wrapper-input.arow-rotate {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .select-box__wrapper-input.arow-rotate::after {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-transform: translateY(-50%) rotate(180deg);
       -ms-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
