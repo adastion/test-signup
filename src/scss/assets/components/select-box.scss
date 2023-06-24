@@ -7,7 +7,7 @@
 		&::after {
 			content: "";
 			position: absolute;
-			z-index: 20;
+			z-index: 15;
 			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
@@ -17,7 +17,9 @@
 			background-position: center;
 		}
 
+		
 		&.arow-rotate {
+			transition: all 0.3s ease;
 			&::after {
 				transform: translateY(-50%) rotate(180deg);
 			}

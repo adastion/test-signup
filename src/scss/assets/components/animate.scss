@@ -1,6 +1,6 @@
 .animate {
 	&__backInDown {
-		animation: backInDown  ease-in;
+		animation: backInDown 0.5s ease-in-out;
 
 		@keyframes backInDown {
 			0% {
@@ -12,35 +12,35 @@
 		}
 
 		&--delay-1 {
-			animation: backInDown 0.5s ease-in;
+			animation: backInDown 0.5s ease-in-out;
 		}
 
 		&--delay-2 {
-			animation: backInDown 1s ease-in;
+			animation: backInDown 1s ease-in-out;
 		}
 
 		&--delay-3 {
-			animation: backInDown 1.5s ease-in;
+			animation: backInDown 1.5s ease-in-out;
 		}
 
 		&--delay-4 {
-			animation: backInDown 2s ease-in;
+			animation: backInDown 2s ease-in-out;
 		}
 
 		&--delay-5 {
-			animation: backInDown 2.5s ease-in;
+			animation: backInDown 2.5s ease-in-out;
 		}
 
 		&--delay-6 {
-			animation: backInDown 3s ease-in;
+			animation: backInDown 3s ease-in-out;
 		}
 
 		&--delay-7 {
-			animation: backInDown 3.5s ease-in;
+			animation: backInDown 3.5s ease-in-out;
 		}
 
 		&--delay-8 {
-			animation: backInDown 4s ease-in;
+			animation: backInDown 4s ease-in-out;
 		}
 	}
 }
