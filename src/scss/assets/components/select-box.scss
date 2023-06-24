@@ -1,15 +1,13 @@
 .select-box {
 	position: relative;
 
-	&__select {
+	&__wrapper-input {
 		position: relative;
-		cursor: pointer;
-		text-align: start;
-    height: 28.09px;
 
 		&::after {
 			content: "";
 			position: absolute;
+			z-index: 20;
 			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
@@ -18,6 +16,19 @@
 			background: url("../images/arrow-down.svg") no-repeat;
 			background-position: center;
 		}
+
+		&.arow-rotate {
+			&::after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+
+	&__select {
+		cursor: pointer;
+		text-align: start;
+		width: 100%;
+		height: 28.09px;
 	}
 
 	&__list {
@@ -33,6 +44,10 @@
 
 		&.show {
 			display: grid;
+		}
+
+		&--width {
+			width: 120%;
 		}
 	}
 

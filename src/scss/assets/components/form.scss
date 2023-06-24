@@ -37,6 +37,16 @@
 		}
 	}
 
+	&__inner-date {
+		display: grid;
+		grid-template-columns: 56px 3fr 2fr;
+		gap: 9.8px;
+
+		@include phone-and-less {
+			grid-template-columns: 1fr;
+		}
+	}
+
 	&__label-gender {
 		margin-left: 18px;
 		position: relative;
