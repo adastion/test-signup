@@ -1,0 +1,46 @@
+.animate {
+	&__backInDown {
+		animation: backInDown  ease-in;
+
+		@keyframes backInDown {
+			0% {
+				transform: translateY(-2000%);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
+
+		&--delay-1 {
+			animation: backInDown 0.5s ease-in;
+		}
+
+		&--delay-2 {
+			animation: backInDown 1s ease-in;
+		}
+
+		&--delay-3 {
+			animation: backInDown 1.5s ease-in;
+		}
+
+		&--delay-4 {
+			animation: backInDown 2s ease-in;
+		}
+
+		&--delay-5 {
+			animation: backInDown 2.5s ease-in;
+		}
+
+		&--delay-6 {
+			animation: backInDown 3s ease-in;
+		}
+
+		&--delay-7 {
+			animation: backInDown 3.5s ease-in;
+		}
+
+		&--delay-8 {
+			animation: backInDown 4s ease-in;
+		}
+	}
+}

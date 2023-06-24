@@ -382,6 +382,46 @@ input {
 .form__inner-inputs-radio input:hover::before, .form__inner-inputs-radio input:focus-within::before {
   border: 2px solid red;
 }
+.form__btn--error {
+  -webkit-animation: animateButton 0.8s ease-in-out;
+          animation: animateButton 0.8s ease-in-out;
+}
+@-webkit-keyframes animateButton {
+  0% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  25% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  75% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+}
+@keyframes animateButton {
+  0% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  25% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  75% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+}
 
 .select-box {
   position: relative;
@@ -479,4 +519,61 @@ input {
 }
 .footer__btn:hover {
   opacity: 0.7;
+}
+
+.animate__backInDown {
+  -webkit-animation: backInDown ease-in;
+          animation: backInDown ease-in;
+}
+@-webkit-keyframes backInDown {
+  0% {
+    -webkit-transform: translateY(-2000%);
+            transform: translateY(-2000%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes backInDown {
+  0% {
+    -webkit-transform: translateY(-2000%);
+            transform: translateY(-2000%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.animate__backInDown--delay-1 {
+  -webkit-animation: backInDown 0.5s ease-in;
+          animation: backInDown 0.5s ease-in;
+}
+.animate__backInDown--delay-2 {
+  -webkit-animation: backInDown 1s ease-in;
+          animation: backInDown 1s ease-in;
+}
+.animate__backInDown--delay-3 {
+  -webkit-animation: backInDown 1.5s ease-in;
+          animation: backInDown 1.5s ease-in;
+}
+.animate__backInDown--delay-4 {
+  -webkit-animation: backInDown 2s ease-in;
+          animation: backInDown 2s ease-in;
+}
+.animate__backInDown--delay-5 {
+  -webkit-animation: backInDown 2.5s ease-in;
+          animation: backInDown 2.5s ease-in;
+}
+.animate__backInDown--delay-6 {
+  -webkit-animation: backInDown 3s ease-in;
+          animation: backInDown 3s ease-in;
+}
+.animate__backInDown--delay-7 {
+  -webkit-animation: backInDown 3.5s ease-in;
+          animation: backInDown 3.5s ease-in;
+}
+.animate__backInDown--delay-8 {
+  -webkit-animation: backInDown 4s ease-in;
+          animation: backInDown 4s ease-in;
 }
