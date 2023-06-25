@@ -2,6 +2,12 @@
 	height: 100%;
 	z-index: 10;
 
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -52,7 +58,7 @@
 		position: relative;
 		cursor: pointer;
 		padding: 5px 12px 6.33px 0;
-		
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -64,7 +70,7 @@
 			border-radius: 50%;
 			border: 0.7px solid $royal_blue;
 		}
-		
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -78,13 +84,13 @@
 			display: none;
 		}
 	}
-	
+
 	&__inner-inputs-radio {
 		display: flex;
 		align-items: center;
 		font-weight: 400;
 		gap: 19px;
-				
+
 		& input:checked + .form__label-gender::after {
 			display: block;
 		}
@@ -98,7 +104,7 @@
 	}
 
 	&__btn {
-		&--error {
+		&.error {
 			animation: animateButton 0.8s ease-in-out;
 
 			@keyframes animateButton {

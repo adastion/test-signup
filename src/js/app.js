@@ -39,37 +39,3 @@ document.querySelectorAll(".select-box").forEach(function (dropDownWrapper) {
 		}
 	});
 });
-
-//Work with forms
-
-// const form = document.querySelectorAll("form");
-// const input = document.querySelectorAll("input");
-
-// const massage = {
-// 	loading: "Loading...",
-// 	successs: "Thank you! We will contact you",
-// 	failure: "Failure.",
-// };
-
-// form.forEach(function (item) {
-// 	item.addEventListener("submit", function (event) {
-// 		event.preventDefault();
-
-// 		let statusMessage = document.createElement("div");
-// 		statusMessage.classList.add("show-message");
-// 		item.appendChild(statusMessage);
-
-// 		const formData = new FormData(item);
-
-// 	});
-// });
-
-// const postData = async (url, data) => {
-// 	document.querySelector(".show-message").textContent = message.loading;
-// 	let result = await fetch(url, {
-// 		method: "POST",
-// 		body: data,
-// 	});
-
-// 	return await result.text();
-// };
