@@ -1,0 +1,26 @@
+.header {
+  position: relative;
+
+  &__map {
+    position: absolute;
+    top: -772px;
+    right: -76px;
+    z-index: 25;
+
+    & path[fill-rule] {
+      fill: $cornflower_blue;
+    }
+  }
+
+  &__line {
+    stroke-dashoffset: 642px;
+    stroke-dasharray: 642px;
+    animation: map-line 3s infinite 6s;
+
+    @keyframes map-line {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+}
