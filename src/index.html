@@ -15,25 +15,25 @@
       <header class="header">
         <h1 class="header__title">Sign up</h1>
       </header>
-      <main class="content content--background-image">
+      <main class="content content--background-image content--show-registered">
         <div class="content__block-title">
           <h2 class="content__title">New user? </h2>
           <p>Use the form below to create your account.</p>
         </div>
-        <form class="form" action="#">
+        <form class="form" action="https://echo.htmlacademy.ru" name="registration" method="post" novalidate>
           <ul class="form__list">
             <li class="form__item animate animate__backInDown animate__backInDown--delay-1">
               <label class="form__name-input" for="firstName">First Name</label>
-              <input class="form__input" id="firstName" type="text">
+              <input class="form__input" id="firstName" name="firstName" type="text">
             </li>
             <li class="form__item animate animate__backInDown animate__backInDown--delay-2">
               <label class="form__name-input" for="lastName">Last Name</label>
-              <input class="form__input" id="lastName" type="text">
+              <input class="form__input" id="lastName" name="lastName" type="text">
             </li>
             <li class="select-box form__item animate animate__backInDown animate__backInDown--delay-3">
               <label class="form__name-input" for="nationality">Nationality</label>
               <div class="select-box__wrapper-input">
-                <input id="nationality" type="text" class="select-box__select form__input" name="select-nationality">
+                <input id="nationality" type="text" class="select-box__select form__input" name="nationality">
               </div>
               <ul class="select-box__list">
                 <li class="select-box__item">American</li>
@@ -46,7 +46,7 @@
             </li>
             <li class="form__item animate animate__backInDown animate__backInDown--delay-4">
               <label class="form__name-input" for="userEmail">E-mail</label>
-              <input class="form__input" id="userEmail" type="email">
+              <input class="form__input" id="userEmail" name="email" type="email">
             </li>
             <li class="form__item animate animate__backInDown animate__backInDown--delay-5">
               <div class="form__name-input">Date of Birth</div>
@@ -54,7 +54,7 @@
                 <li class="select-box form__item">
                   <div class="select-box__wrapper-input">
                     <input id="day" type="text" class="select-box__select form__input"
-                      name="select-day">
+                      name="day">
                   </div>
                   <ul class="select-box__list">
                     <li class="select-box__item">1</li>
@@ -93,7 +93,7 @@
                 <li class="select-box form__item">
                   <div class="select-box__wrapper-input">
                     <input id="month" type="text" class="select-box__select form__input"
-                      name="select-month">
+                      name="month">
                   </div>
                   <ul class="select-box__list select-box__list--width">
                     <li class="select-box__item">January</li>
@@ -113,7 +113,7 @@
                 <li class="select-box form__item">
                   <div class="select-box__wrapper-input">
                     <input id="year" type="text" class="select-box__select form__input"
-                      name="select-year">
+                      name="year">
                   </div>
                   <ul class="select-box__list">
                     <li class="select-box__item">2023</li>
@@ -144,11 +144,11 @@
             </li>
             <li class="form__item animate animate__backInDown animate__backInDown--delay-7">
               <label class="form__name-input" for="password">Password</label>
-              <input id="password" class="form__input" type="password">
+              <input id="password" class="form__input" name="password" type="password">
             </li>
             <li class="form__item animate animate__backInDown animate__backInDown--delay-8">
               <label class="form__name-input" for="confirmPassword">Confirm Password</label>
-              <input id="confirmPassword" class="form__input" type="password">
+              <input id="confirmPassword" class="form__input" name="confirm-password" type="password">
             </li>
           </ul>
           <footer class="footer">

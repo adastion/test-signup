@@ -39,3 +39,48 @@ document.querySelectorAll(".select-box").forEach(function (dropDownWrapper) {
 		}
 	});
 });
+
+//Work with form
+const form = document.querySelector("form");
+const inputs = document.querySelectorAll("input");
+const message = {
+	loading: "loading...",
+	success: "Ok )",
+	failure: "Error",
+};
+
+const clearInputs = () => {
+	inputs.forEach(item => {
+		item.value = '';
+	})
+}
+
+const postData = async (url, data) => {
+	let result = await fetch(url, {
+		method: "POST",
+		body: data,
+	});
+
+	return await result.text();
+};
+
+form.addEventListener("submit", (event) => {
+	event.preventDefault();
+	let statusMessage = document.createElement("div");
+	statusMessage.classList.add("show-status");
+	form.appendChild(statusMessage);
+
+	const formData = new FormDate(form);
+	postData("server.php", formData)
+		.then((result) => {
+			console.log(result);
+			statusMessage.textContent = message.success;
+		})
+		.catch(() => statusMessage.textContent = message.failure)
+		.finally(()=>{
+			clearInputs();
+			setTimeout(()=> {
+				statusMessage.remove();
+			}, 5000);
+		})
+});

@@ -33,6 +33,10 @@
 		}
 	}
 
+	&--show-registered {
+		display: flex;
+	}
+
 	&__message {
 		display: flex;
 		flex-direction: column;

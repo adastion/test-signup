@@ -14,6 +14,10 @@
 	&__inner {
 		display: flex;
 		gap: 4px;
+
+		@include phone-and-less {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__btn {
