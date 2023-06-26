@@ -1,10 +1,11 @@
 .content {
 	display: flex;
 	flex-direction: column;
-	justify-content: end;
+	justify-content: center;
 	width: 100%;
 	padding: 39px 21px 32px;
 	background: $white;
+	position: relative;
 
 	@include phone-and-less {
 		padding: 29px 11px 22px;
@@ -12,8 +13,6 @@
 	}
 
 	&--background-image {
-		position: relative;
-
 		&::after {
 			content: "";
 			position: absolute;
@@ -33,10 +32,6 @@
 		}
 	}
 
-	&--show-registered {
-		display: flex;
-	}
-
 	&__message {
 		display: flex;
 		flex-direction: column;
@@ -53,6 +48,27 @@
 
 	&__block-title {
 		z-index: 10;
+
+		&--center {
+			display: grid;
+			gap: 11px;
+			margin-left: 43px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
+			@include tablet-and-less {
+				margin: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			@include phone-and-less {
+				& .content__title {
+					font-size: 18px;
+				}
+			}
+		}
 	}
 
 	&__title {
