@@ -29,14 +29,14 @@ const path = {
     fonts: `${buildFolder}/fonts/`,
   },
   src: {
-    html: `${srcFolder}/*.html`,
+    html: `${srcFolder}/*.{html,php}`,
     scss: `${srcFolder}/scss/style.scss`,
     js: `${srcFolder}/js/app.js`,
     images: `${srcFolder}/images/**/*.{svg,jpg,png,gif,ico,webp,webmanifest,xml,json}`,
     fonts: `${srcFolder}/fonts/**/*.{eot,woff,woff2,ttf}`,
   },
   watch: {
-    html: `${srcFolder}/**/*.html`,
+    html: `${srcFolder}/**/*.{html,php}`,
     scss: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/images/**/*.{svg,jpg,png,gif,ico,webp,webmanifest,xml,json}`,
