@@ -1,5 +1,10 @@
 // Work with form
 const workWithForm = document.querySelectorAll("form");
+const contentMain = document.querySelector(".content");
+const wrapperInputs = document.querySelector(".form__list");
+const wrapperTitle = document.querySelector(".content__block-title");
+const messageTitle = document.querySelector(".content__title");
+const messageText = document.querySelector(".content__text");
 
 workWithForm.forEach(function (form) {
 	const userName = form.querySelector('input[name="firstName"]');
@@ -95,25 +100,31 @@ workWithForm.forEach(function (form) {
 		}
 	}
 
-	const clearInputs = () => {
+	//Success message. Hiding list inputs and button.
+	function successMessage() {
+		contentMain.classList.remove("content--background-image");
+		wrapperInputs.classList.add("hidden");
+		submitBtn.classList.add("hidden");
+		form.classList.add("form--bottom");
+		wrapperTitle.classList.add("content__block-title--center");
+		messageTitle.textContent = "Thank You!";
+		messageText.textContent = "you registered!";
+	}
+
+	function clearInputs() {
 		inputs.forEach((item) => {
 			item.value = "";
-			document.querySelectorAll(".form__item").forEach((item) => {
-				if (item.lastElementChild === userEmail) {
-					item.lastElementChild.classList.remove("form__item--correct");
-				}
-			});
 		});
-	};
+	}
 
-	const postData = async (url, data) => {
+	async function postData(url, data) {
 		let res = await fetch(url, {
 			method: "POST",
 			body: data,
 		});
 
 		return await res.text();
-	};
+	}
 
 	form.addEventListener("submit", function (event) {
 		event.preventDefault();
@@ -128,6 +139,7 @@ workWithForm.forEach(function (form) {
 			postData("server.php", formData)
 				.then((res) => {
 					console.log(res);
+					successMessage();
 				})
 				.catch(() => "ok")
 				.finally(() => {
