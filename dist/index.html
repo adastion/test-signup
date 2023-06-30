@@ -20,7 +20,7 @@
           <h2 class="content__title">New user? </h2>
           <p class="content__text">Use the form below to create your account.</p>
         </div>
-        <form class="form" name="registration" method="post" novalidate>
+        <form class="form" name="registration" novalidate>
           <ul class="form__list">
             <li class="form__item animate animate__backInDown animate__backInDown--delay-1">
               <label class="form__name-input" for="firstName">First Name</label>
@@ -136,9 +136,9 @@
             <li class="form__item animate animate__backInDown animate__backInDown--delay-6">
               <span class="form__name-input">Gender</span>
               <div class="form__inner-inputs-radio">
-                <input id="male" class="visually-hidden" type="radio" name="gender">
+                <input id="male" class="visually-hidden" type="radio" name="gender" data-name="male">
                 <label class="form__label-gender" for="male">Male</label>
-                <input id="female" class="visually-hidden" type="radio" name="gender">
+                <input id="female" class="visually-hidden" type="radio" name="gender" data-name="female">
                 <label class="form__label-gender" for="female">Female</label>
               </div>
             </li>
